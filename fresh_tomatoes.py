@@ -8,8 +8,6 @@ main_page_head = '''
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="author" content="name">
-        <meta name="description" content="description here">
-        <meta name="keywords" content="keywords,here">
         <title>Spicy Tomatoes!</title>
         
         <!-- Bootstrap 3 -->
@@ -46,7 +44,7 @@ main_page_head = '''
                 margin-bottom: 20px;
                 padding-top: 20px;
             }
-            /*highlight hovered tile*/
+            /*highlight hovered movie tile*/
             .movie-tile:hover {
                 background-color: #EEE;
                 cursor: pointer;
@@ -64,7 +62,10 @@ main_page_head = '''
                 top: 0;
                 background-color: white;
             }
-            /*Sidebar navigation - slides in from left side*/
+            
+            /*Sidebar navigation - slides in from left side -
+            Fills entire height but adjusted for top nav bar*/
+            
             .sidenav {
                 height: 100%; 
                 width: 0; /* 0 width - change this with JavaScript */
@@ -78,7 +79,7 @@ main_page_head = '''
                 transition: 0.5s; 
             }
 
-            /* The navigation menu links */
+            /* The navigation menu links padding and colored; block */
             .sidenav a {
                 padding: 8px 8px 8px 32px;
                 text-decoration: none;
@@ -88,7 +89,7 @@ main_page_head = '''
                 transition: 0.3s
             }
 
-            /* When you mouse over the navigation links, change their color */
+            /* When you mouse over the navigation links, highlight*/
             .sidenav a:hover, .offcanvas a:focus{
                 color: #f1f1f1;
             }
@@ -107,6 +108,7 @@ main_page_head = '''
                 .sidenav {padding-top: 15px;}
                 .sidenav a {font-size: 18px;}
             }
+            
             /*Link to open sidebar*/
             .click a{
             margin-left: 170px;
@@ -159,6 +161,7 @@ main_page_content = '''
 <!DOCTYPE html>
 <html lang="en">
    <body>
+   
         <!-- Trailer Video Modal -->
         <div class="modal" id="trailer">
           <div class="modal-dialog">
@@ -183,16 +186,16 @@ main_page_content = '''
           </div>
         </div>
 
-        <!-- sidenav (just for show) -->
+        <!-- sidenav (just for show), using using closeNav to close -->
         <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
           <a href="#">Action</a>
           <a href="#">Comedy</a>
           <a href="#">RomCom</a>
           <a href="#">Horror</a>
         </div>
 
-        <!-- open the sidenav (just for show) -->
+        <!-- open the sidenav (just for show) using openNav when hitting the link: Genres -->
         <span class="click" onclick="openNav()"><a href="#">Genres</a></span>
         
         <div class="container">
