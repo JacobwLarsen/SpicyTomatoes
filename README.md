@@ -8,6 +8,7 @@ It is a simple python website mockup for displaying movie trailers.
   `git clone <url>`
   2. Then execute the python file:
   `python entertainment_center.py`
+  3. A browser tab will open with the site.
   
 ##Note:
 
