@@ -2,7 +2,7 @@ import webbrowser
 import os
 import re
 
-# Styles and scripting for the page
+# Header Area - styles and scripts
 main_page_head = '''
  <head>
         <meta charset="UTF-8">
@@ -11,23 +11,26 @@ main_page_head = '''
         <meta name="description" content="description here">
         <meta name="keywords" content="keywords,here">
         <title>Spicy Tomatoes!</title>
-
+        
         <!-- Bootstrap 3 -->
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
         
-        
+        <!-- Begin Styling -->
         <style type="text/css" media="screen">
             body {
-                padding-top: 80px;
+                padding-top: 80px; 
             }
+            
+            /*Movie modal styling*/
             #trailer .modal-dialog {
                 margin-top: 200px;
                 width: 640px;
                 height: 480px;
-            }
+            } 
+            /*positioning the close button for movie trailers*/
             .hanging-close {
                 position: absolute;
                 top: -12px;
@@ -38,10 +41,12 @@ main_page_head = '''
                 width: 100%;
                 height: 100%;
             }
+            /*create extra space for movie tiles*/
             .movie-tile {
                 margin-bottom: 20px;
                 padding-top: 20px;
             }
+            /*highlight hovered tile*/
             .movie-tile:hover {
                 background-color: #EEE;
                 cursor: pointer;
@@ -59,18 +64,18 @@ main_page_head = '''
                 top: 0;
                 background-color: white;
             }
-            /* The side navigation menu */
+            /*Sidebar navigation - slides in from left side*/
             .sidenav {
-                height: 100%; /* 100% Full-height */
+                height: 100%; 
                 width: 0; /* 0 width - change this with JavaScript */
-                position: fixed; /* Stay in place */
-                z-index: 9002; /* Stay on top */
+                position: fixed; 
+                z-index: 9002; 
                 top: 50px;
                 left: 0;
-                background-color: #111; /* Black*/
+                background-color: #111; 
                 overflow-x: hidden; /* Disable horizontal scroll */
-                padding-top: 60px; /* Place content 60px from the top */
-                transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+                padding-top: 60px; 
+                transition: 0.5s; 
             }
 
             /* The navigation menu links */
@@ -97,18 +102,12 @@ main_page_head = '''
                 margin-left: 50px;
             }
 
-            /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-            #main {
-                transition: margin-left .5s;
-                padding: 20px;
-            }
-
             /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
             @media screen and (max-height: 450px) {
                 .sidenav {padding-top: 15px;}
                 .sidenav a {font-size: 18px;}
             }
-
+            /*Link to open sidebar*/
             .click a{
             margin-left: 170px;
             text-decoration: none;
