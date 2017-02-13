@@ -3,6 +3,12 @@
 Spicy Tomatoes marks my **first** github repository. 
 It is a simple python website mockup for displaying movie trailers.
 
+##Execute:
+  1. Clone the repository or download it into the chosen directory: 
+  `git clone <url>`
+  2. Then execute the python file:
+  `python entertainment_center.py`
+  
 ##Note:
 
 The sidebar navigation is for show only, as this is mainly just a mockup design and practice in python.
