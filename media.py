@@ -1,12 +1,10 @@
 import webbrowser
 
-
 # create class: Movie
+
+
 class Movie():
-
-
-    """Initializes the class "Movie" to create movie objects
-       that have a title, storyline, poster image, and playable trailer"""
+"""Initializes the class "Movie"with a title, storyline, poster image, and playable trailer"""
     
     # Valid ratings to be given to Movies (currently unused)
     VALID_RATINGS=["G","PG","PG13","R"]
